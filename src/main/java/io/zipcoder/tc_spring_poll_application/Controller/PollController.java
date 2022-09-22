@@ -1,6 +1,7 @@
 package io.zipcoder.tc_spring_poll_application.Controller;
 
 import io.zipcoder.tc_spring_poll_application.Domain.Poll;
+import io.zipcoder.tc_spring_poll_application.Exception.ResourceNotFoundException;
 import io.zipcoder.tc_spring_poll_application.Repositories.PollRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -9,6 +10,8 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
+import java.util.ArrayList;
+import java.util.List;
 
 @RestController
 public class PollController {
@@ -58,5 +61,7 @@ public class PollController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
+    private void verifyPoll() throws ResourceNotFoundException{
+        }
 
 }
