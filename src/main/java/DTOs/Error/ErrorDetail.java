@@ -47,4 +47,10 @@ public class ErrorDetail {
     public void setDeveloperMessage(String developerMessage) {
         this.developerMessage = developerMessage;
     }
+
+    public void developerMessage() {
+    }
+
+    public void detail() {
+    }
 }
