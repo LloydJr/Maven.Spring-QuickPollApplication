@@ -61,7 +61,10 @@ public class PollController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-    private void verifyPoll() throws ResourceNotFoundException{
+    private void verifyPoll(Long pollId) {
+        if(!pollRepository.exists(pollId)) {
+            throw new ResourceNotFoundException("Not available.");
+        }
         }
 
 }
